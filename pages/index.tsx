@@ -3,9 +3,9 @@ import Head from '../components/common/Head'
 
 const Home: NextPage = () => {
   return (
-    <div>
-     <Head />
-    </div>
+    <>
+      <Head />
+    </>
   );
 };
 
