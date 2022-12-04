@@ -12,7 +12,6 @@ const SEO = () => {
       <meta property="og:description" content={title} />
       <meta property="og:image" content="https://arsty-challenge.vercel.app/image.png" />
       <meta property="og:url" content="https://arsty-challenge.vercel.app/" />
-
       <link rel="icon" href="/favicon.ico" />
     </Head>
   )
