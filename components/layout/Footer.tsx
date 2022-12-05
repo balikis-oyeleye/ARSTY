@@ -5,7 +5,7 @@ import { GoLocation } from 'react-icons/go'
 
 const Footer = () => {
   return (
-    <footer className='container px-2 sm:px-0 mx-auto grid grid-cols-2 md:grid-cols-4 items-center'>
+    <footer className='container px-2 sm:px-0 mx-auto grid sm:grid-cols-2 grid-cols-1 md:grid-cols-4 items-center gap-y-4'>
       <div className='self-start md:self-center'>
         <h1 className='text-dark text-3xl font-bold font-stix'>ARTSY.</h1>
       </div>
