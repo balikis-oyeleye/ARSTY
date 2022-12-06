@@ -7,3 +7,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-arrow {
+  display: none !important;
+}
+
+.overlay {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.upcoming {
+  background: linear-gradient(
+    99.99deg,
+    #4693ed -26.21%,
+    #79c2d2 22.16%,
+    rgba(192, 86, 9, 0.49) 111.62%
+  );
+}

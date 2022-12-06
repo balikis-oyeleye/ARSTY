@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     screens: {
@@ -17,6 +18,8 @@ module.exports = {
       colors: {
         dark: "#292929",
         grey: "#333333",
+        grey2: "#616161",
+        overlay: "#D9D9D9",
       },
     },
     fontFamily: {
@@ -25,5 +28,5 @@ module.exports = {
       satoshi: ['"Satoshi"', "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

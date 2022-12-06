@@ -22,7 +22,7 @@ const Header = ({ setToggle }: headerProp) => {
         </h1>
       </div>
       <nav className="hidden sm:block">
-        <ul className="flex gap-x-[36px]">
+        <ul className="flex gap-x-[36px] lg:gap-x-[47px]">
           {navLinks.map((link) => (
             <li key={link} className='font-satoshi'>{link}</li>
           ))}
