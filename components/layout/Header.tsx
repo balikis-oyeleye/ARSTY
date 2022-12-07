@@ -8,7 +8,7 @@ import Notification from '../../assets/svg/bell.svg'
 const Header = ({ setToggle }: headerProp) => {
 
   return (
-    <header className="container mx-auto flex items-center justify-between mt-3 px-2 sm:px-0">
+    <header className="container mx-auto flex items-center justify-between mt-3 px-2 xs:px-0">
       <BiMenu
         size={28}
         className="cursor-pointer block sm:hidden"

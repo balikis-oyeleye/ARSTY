@@ -24,3 +24,9 @@
     rgba(192, 86, 9, 0.49) 111.62%
   );
 }
+
+.upcoming-container {
+  background-image: url("../assets/images/Rectangle\ 91.png");
+  background-position: center;
+  background-size: cover;
+}

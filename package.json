@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-slick": "^0.23.10",
     "flowbite": "^1.5.4",
     "flowbite-react": "^0.3.6",
     "framer-motion": "^7.6.15",

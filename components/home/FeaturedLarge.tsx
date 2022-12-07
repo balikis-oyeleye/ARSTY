@@ -12,10 +12,9 @@ const FeaturedLarge = () => {
           <div key={product.id} className={`md:flex border-t-[0.5px] pt-8 mb-8 ${index === 1 ? 'flex-row-reverse' : 'flex-row'} gap-x-[37px]`}>
             <div className='lg:min-w-[601px] flex-1 md:h-full relative'>
               <Image src={product.img} />
-              <div className='overlay absolute top-0 w-full bottom-0 md:hidden py-4 flex flex-col items-end gap-y-10 pr-6'>
+              <div className='overlay absolute top-0 w-full bottom-0 md:hidden py-2 flex flex-col items-end pr-6'>
                 <h3 className='font-semibold font-clashDisplay text-white text-[30px]'>{product.title}</h3>
-                <div className='text-white border border-white p-2 rounded-full'><BsArrowRight size={24} /></div>
-
+                <div className='text-white absolute bottom-0 border border-white p-2 rounded-full'><BsArrowRight size={24} /></div>
               </div>
             </div>
             <div className='flex flex-col gap-y-[38px] h-full flex-1'>

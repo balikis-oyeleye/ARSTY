@@ -4,7 +4,7 @@ import { navLinks } from "../../data/navLinks";
 const Mobile = ({ setToggle, toggle }: mobileProp) => {
   return (
     <aside
-      className={`fixed bg-white top-0 h-full w-full duration-500 transition-all p-[30px] ${!toggle ? "-left-full" : "left-0"
+      className={`fixed bg-white top-0 h-full w-full duration-500 transition-all p-[30px] z-50  ${!toggle ? "-left-full" : "left-0"
         }`}
     >
       <div className="flex justify-between items-center">
