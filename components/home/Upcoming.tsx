@@ -24,7 +24,7 @@ const Upcoming = () => {
             </div>
           </div>
           <div className="flex self-end gap-x-6 items-center">
-            <Link href="/auction">
+            <Link href="/auctions">
               <span className="border-b cursor-pointer">See more</span>
             </Link>
             <button className="border cursor-pointer p-2 rounded-[10px]">
