@@ -2,7 +2,7 @@ import React from "react";
 
 const TopCreators = () => {
   return (
-    <section className="h-[251px] md:h-[400px] overflow-hidden bg-[#E2E2E2] mt-[100px] font-clashDisplay">
+    <section className="h-[251px] md:h-[400px] overflow-hidden bg-[#E2E2E2] mt-[40px] font-clashDisplay relative">
       <div className="container mx-auto px-2 xs:px-0 relative">
         <div className="flex justify-between">
           <h3 className="font-semibold text-xl text-[#161616] min-w-[264px] max-w-[264px]">

@@ -1,12 +1,8 @@
-
-import React, { useEffect, useState } from 'react'
-import Slider from 'react-slick'
+import React from "react";
+import Slider from "react-slick";
 
 const Carousel = ({ img1, img2, img3, img4, img5 }: carouselProp) => {
-
-
-  const images = [img1, img2, img3, img4, img5]
-
+  const images = [img1, img2, img3, img4, img5];
 
   let settings = {
     infinite: true,
@@ -15,9 +11,8 @@ const Carousel = ({ img1, img2, img3, img4, img5 }: carouselProp) => {
     autoplay: true,
     autoplaySpeed: 1500,
     cssEase: "linear",
-    pauseOnHover: false
+    pauseOnHover: false,
   };
-
 
   return (
     <>
@@ -28,13 +23,12 @@ const Carousel = ({ img1, img2, img3, img4, img5 }: carouselProp) => {
               <div key={index}>
                 <img src={image.src} alt="slider" />
               </div>
-            )
+            );
           })}
         </Slider>
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

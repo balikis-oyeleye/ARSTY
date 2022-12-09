@@ -7,6 +7,7 @@ import ImageSlider from "../components/home/ImageSlider";
 import ImageStack from "../components/home/ImageStack";
 import Upcoming from "../components/home/Upcoming";
 import TopCreators from "../components/home/TopCreators";
+import Newsletter from "../components/home/Newsletter";
 
 const Home: NextPage = () => {
   return (
@@ -38,6 +39,7 @@ const Home: NextPage = () => {
       </section>
       <Upcoming />
       <TopCreators />
+      <Newsletter />
     </>
   );
 };
