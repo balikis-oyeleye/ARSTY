@@ -20,6 +20,7 @@ module.exports = {
         grey: "#333333",
         grey2: "#616161",
         overlay: "#D9D9D9",
+        text_fade: "rgba(0, 0, 0, 0.57)",
       },
     },
     fontFamily: {

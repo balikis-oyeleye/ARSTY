@@ -6,6 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 import ImageSlider from "../components/home/ImageSlider";
 import ImageStack from "../components/home/ImageStack";
 import Upcoming from "../components/home/Upcoming";
+import TopCreators from "../components/home/TopCreators";
 
 const Home: NextPage = () => {
   return (
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
         <FeaturedLarge />
       </section>
       <Upcoming />
+      <TopCreators />
     </>
   );
 };
