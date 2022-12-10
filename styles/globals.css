@@ -29,3 +29,20 @@
   background-position: center;
   background-size: cover;
 }
+
+._2jvtI {
+  display: flex;
+  gap: 5px;
+}
+
+._2jvtI li {
+  font-family: "Satoshi", sans-serif;
+  color: #bcb7b7;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+._2jvtI li:not(:last-of-type)::after {
+  content: " /";
+}

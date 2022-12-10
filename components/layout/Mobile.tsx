@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { BiX } from "react-icons/bi";
 import { navLinks } from "../../data/navLinks";
 
 const Mobile = ({ setToggle, toggle }: mobileProp) => {
   return (
     <aside
-      className={`fixed bg-white top-0 h-full w-full duration-500 transition-all p-[30px] z-50  ${
+      className={`fixed bg-white top-0 h-full w-full duration-500 transition-all p-[30px] z-50 sm:hidden  ${
         !toggle ? "-left-full" : "left-0"
       }`}
     >
@@ -24,8 +25,11 @@ const Mobile = ({ setToggle, toggle }: mobileProp) => {
             <li
               className="text-grey text-lg font-roboto cursor-pointer hover:text-black font-medium"
               key={link.id}
+              onClick={() => {
+                setToggle((prev) => (prev = false));
+              }}
             >
-              {link.name}
+              <Link href={link.to}>{link.name}</Link>
             </li>
           ))}
         </ul>

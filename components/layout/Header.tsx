@@ -41,7 +41,11 @@ const Header = ({ setToggle }: headerProp) => {
       <div className="flex gap-x-4">
         <img src={Search.src} alt="search" className="w-[24px]" />
         <img src={Cart.src} alt="cart" className="w-[24px]" />
-        <img src={Notification.src} alt="notification" className="w-[24px]" />
+        <img
+          src={Notification.src}
+          alt="notification"
+          className="w-[24px] hidden sm:block"
+        />
       </div>
     </header>
   );
