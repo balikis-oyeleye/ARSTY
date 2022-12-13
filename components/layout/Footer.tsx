@@ -5,18 +5,18 @@ import { GoLocation } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer className="container px-2 sm:px-0 mx-auto sm:grid sm:grid-cols-2 grid-cols-1 md:grid-cols-4 items-center gap-y-4 flex flex-col justify-center">
-      <div className="md:self-center">
+    <footer className="container px-2 sm:px-0 mx-auto sm:grid sm:grid-cols-2 grid-cols-1 md:grid-cols-4 items-center gap-y-4  mb-4">
+      <div className="md:self-center hidden sm:block">
         <h1 className="text-dark text-3xl font-bold font-stix">ARTSY.</h1>
       </div>
-      <ul className="flex flex-col items-center sm:items-start">
+      <ul className="flex-col items-center sm:items-start hidden sm:flex">
         {footerLinks1.map((link) => (
           <li className="text-grey font-satoshi" key={link}>
             {link}
           </li>
         ))}
       </ul>
-      <ul className="flex flex-col items-center sm:items-start">
+      <ul className="sm:flex flex-col items-center sm:items-start hidden">
         {footerLinks2.map((link) => (
           <li className="text-grey font-satoshi" key={link}>
             {link}

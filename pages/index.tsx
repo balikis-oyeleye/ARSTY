@@ -12,7 +12,7 @@ import Newsletter from "../components/home/Newsletter";
 const Home: NextPage = () => {
   return (
     <>
-      <Head />
+      <Head headTitle="ARTSY" />
       <section className="container mx-auto my-[50px] space-y-6 px-2 xs:px-0">
         <div>
           <h2 className="font-clashDisplay md:font-semibold font-medium text-[32px] md:text-[80px] text-grey md:text-dark text-center mx-auto md:leading-[156.7%] leading-[48px]">

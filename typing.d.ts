@@ -18,3 +18,7 @@ interface carouselProp {
 interface slidesProp {
   slides: string[] | StaticImport[];
 }
+
+interface titleProps {
+  headTitle: string;
+}

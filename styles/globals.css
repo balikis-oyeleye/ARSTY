@@ -8,6 +8,13 @@
 @tailwind components;
 @tailwind utilities;
 
+select:focus input:focus textarea:focus {
+  outline: none !important;
+  border-color: none !important;
+  --tw-ring-shadow: none !important;
+  --tw-ring-color: none !important;
+}
+
 .slick-arrow {
   display: none !important;
 }
@@ -45,4 +52,17 @@
 
 ._2jvtI li:not(:last-of-type)::after {
   content: " /";
+}
+
+.box-shadow {
+  box-shadow: 4px 4px 64px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 798px) {
+  .box-shadow {
+    box-shadow: none;
+  }
+  .box-shadow2 {
+    box-shadow: 4px 4px 64px rgba(0, 0, 0, 0.1);
+  }
 }
