@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "../components/common/Head";
 import FeaturedLarge from "../components/home/FeaturedLarge";
-import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
 import ImageSlider from "../components/home/ImageSlider";
 import ImageStack from "../components/home/ImageStack";
 import Upcoming from "../components/home/Upcoming";

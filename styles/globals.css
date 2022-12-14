@@ -66,3 +66,30 @@ select:focus input:focus textarea:focus {
     box-shadow: 4px 4px 64px rgba(0, 0, 0, 0.1);
   }
 }
+
+.rc-slider-track {
+  background-color: #000 !important;
+}
+
+.rc-slider-handle {
+  border: solid 1px #000 !important;
+  background-color: #000 !important;
+}
+
+.rc-slider-handle-1 {
+  background-color: #fff !important;
+  opacity: 1 !important;
+}
+
+.card {
+  border-radius: 15px !important;
+  border: none;
+}
+
+.card img {
+  border-radius: 8px;
+}
+
+.card > div {
+  padding: 20px 14px;
+}
