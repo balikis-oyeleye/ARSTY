@@ -50,6 +50,10 @@ select:focus input:focus textarea:focus {
   font-size: 18px;
 }
 
+._2jvtI li:last-of-type {
+  color: #000;
+}
+
 ._2jvtI li:not(:last-of-type)::after {
   content: " /";
 }
