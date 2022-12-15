@@ -6,7 +6,7 @@ const Auction = () => {
   return (
     <div>
       <Head headTitle="Auction | ARTSY" />
-      <Breadcrumb />
+      <Breadcrumb isHidden />
     </div>
   );
 };

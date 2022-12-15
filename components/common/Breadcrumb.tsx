@@ -1,9 +1,9 @@
 import React from "react";
 import Breadcrumbs from "nextjs-breadcrumbs";
 
-const Breadcrumb = () => {
+const Breadcrumb = ({ isHidden }: breadcrumbProps) => {
   return (
-    <div className="md:hidden">
+    <div className={`${isHidden ? "md:hidden" : ""}`}>
       <Breadcrumbs useDefaultStyle rootLabel="Home" />
     </div>
   );

@@ -22,3 +22,17 @@ interface slidesProp {
 interface titleProps {
   headTitle: string;
 }
+
+interface breadcrumbProps {
+  isHidden?: boolean;
+}
+
+interface Product {
+  product: {
+    id: number;
+    name: string;
+    image: StaticImageData;
+    price: number;
+    creator: string;
+  };
+}

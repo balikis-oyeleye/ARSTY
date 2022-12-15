@@ -6,13 +6,13 @@ export const featuredProduct = [
   {
     id: 1,
     img: product1,
-    title: "Are We There Yet?",
+    title: "BOOLEAN EGYPTIAN",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
   },
   {
     id: 2,
     img: product2,
-    title: "The Boolean Egyptian",
+    title: "Are We There Yet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
   },
   {

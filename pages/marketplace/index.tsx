@@ -1,16 +1,16 @@
 import React from "react";
-import Breadcrumb from "../components/common/Breadcrumb";
+import Breadcrumb from "../../components/common/Breadcrumb";
 import { BiSearch } from "react-icons/bi";
-import Filters from "../components/marketplace/Filters";
-import Products from "../components/marketplace/Products";
-import Head from "../components/common/Head";
+import Filters from "../../components/marketplace/Filters";
+import Products from "../../components/marketplace/Products";
+import Head from "../../components/common/Head";
 
 const Marketplace = () => {
   return (
     <>
       <Head headTitle="Marketplace | ARTSY" />
       <div className="ml-3 mt-10 px-2 md:px-0">
-        <Breadcrumb />
+        <Breadcrumb isHidden />
       </div>
       <section className="container mx-auto px-2 xs:px-0 flex gap-[72px] font-satoshi">
         <button className="rounded-md bg-[#F4F2F2] gap-x-2 text-[#999999] w-[215px] justify-center py-1 items-center hidden md:flex">

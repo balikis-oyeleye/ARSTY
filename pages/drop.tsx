@@ -6,7 +6,7 @@ const Drop = () => {
   return (
     <div>
       <Head headTitle="Drop | ARTSY" />
-      <Breadcrumb />
+      <Breadcrumb isHidden />
     </div>
   );
 };

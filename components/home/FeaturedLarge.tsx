@@ -3,6 +3,7 @@ import Image from "next/image";
 import { featuredProduct } from "../../data/featured";
 import Creators from "../common/Creators";
 import { BsArrowRight } from "react-icons/bs";
+import Link from "next/link";
 
 const FeaturedLarge = () => {
   return (
@@ -23,7 +24,11 @@ const FeaturedLarge = () => {
                     {product.title}
                   </h3>
                   <div className="text-white absolute bottom-0 border border-white p-2 rounded-full">
-                    <BsArrowRight size={24} />
+                    <Link
+                      href={`/marketplace/${product.title.toLocaleLowerCase()}`}
+                    >
+                      <BsArrowRight size={24} />
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -41,7 +46,11 @@ const FeaturedLarge = () => {
                   64 major creators
                 </p>
                 <div className="text-grey2 border border-grey2 p-2 rounded-full hidden md:block">
-                  <BsArrowRight size={24} />
+                  <Link
+                    href={`/marketplace/${product.title.toLocaleLowerCase()}`}
+                  >
+                    <BsArrowRight size={24} />
+                  </Link>
                 </div>
               </div>
             </div>
