@@ -1,1 +1,1 @@
-# artsy
+# ARTSY
