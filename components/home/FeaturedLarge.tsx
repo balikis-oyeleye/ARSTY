@@ -25,9 +25,13 @@ const FeaturedLarge = () => {
                   </h3>
                   <div className="text-white absolute bottom-0 border border-white p-2 rounded-full">
                     <Link
+                      passHref
+                      legacyBehavior
                       href={`/marketplace/${product.title.toLocaleLowerCase()}`}
                     >
-                      <BsArrowRight size={24} />
+                      <a href="">
+                        <BsArrowRight size={24} />
+                      </a>
                     </Link>
                   </div>
                 </div>
@@ -47,9 +51,13 @@ const FeaturedLarge = () => {
                 </p>
                 <div className="text-grey2 border border-grey2 p-2 rounded-full hidden md:block">
                   <Link
+                    passHref
+                    legacyBehavior
                     href={`/marketplace/${product.title.toLocaleLowerCase()}`}
                   >
-                    <BsArrowRight size={24} />
+                    <a href="">
+                      <BsArrowRight size={24} />
+                    </a>
                   </Link>
                 </div>
               </div>

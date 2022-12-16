@@ -27,12 +27,20 @@ interface breadcrumbProps {
   isHidden?: boolean;
 }
 
+interface productProps {
+  id: number;
+  name: string;
+  image: StaticImageData;
+  price: number;
+  creator: string;
+  category: string;
+  quantity: number;
+}
+
 interface Product {
-  product: {
-    id: number;
-    name: string;
-    image: StaticImageData;
-    price: number;
-    creator: string;
-  };
+  product: productProps;
+}
+
+interface Cart {
+  cartItems: productProps[] | [];
 }

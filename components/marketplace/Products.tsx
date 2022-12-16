@@ -1,4 +1,4 @@
-import { Card } from "flowbite-react";
+import { Card } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -11,13 +11,19 @@ const Products = () => {
         {products.map((product) => {
           return (
             <Card key={product.id} className="card">
-              <Link href={`/marketplace/${product.name.toLocaleLowerCase()}`}>
-                <img
-                  src={product.image.src}
-                  alt={product.name}
-                  className="cursor-pointer"
-                  loading="lazy"
-                />
+              <Link
+                passHref
+                legacyBehavior
+                href={`/marketplace/${product.name.toLocaleLowerCase()}`}
+              >
+                <a href="">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    className="cursor-pointer"
+                    loading="lazy"
+                  />
+                </a>
               </Link>
               <div className="flex justify-between">
                 <h5 className="font-satoshi text-grey font-normal text-base">

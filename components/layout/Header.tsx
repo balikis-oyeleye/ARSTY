@@ -6,9 +6,12 @@ import Cart from "../../assets/svg/cart.svg";
 import Notification from "../../assets/svg/bell.svg";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { RootState } from "../../app/store";
+import { useSelector } from "react-redux";
 
 const Header = ({ setToggle }: headerProp) => {
   const router = useRouter();
+  const cart = useSelector((state: RootState) => state.cart.cartItems);
 
   return (
     <header className="container mx-auto flex items-center justify-between mt-3 px-2 xs:px-0">
@@ -38,9 +41,20 @@ const Header = ({ setToggle }: headerProp) => {
           ))}
         </ul>
       </nav>
-      <div className="flex gap-x-4">
+      <div className="flex gap-x-4 mr-1">
         <img src={Search.src} alt="search" className="w-[24px]" />
-        <img src={Cart.src} alt="cart" className="w-[24px]" />
+        <div className="relative">
+          <Link href="/marketplace/cart" className="relative">
+            <img
+              src={Cart.src}
+              alt="cart"
+              className="w-[24px] cursor-pointer"
+            />
+          </Link>
+          <div className="absolute text-white bg-[#3247e2] text-[11px] rounded-full py-1 px-2 -top-3 -right-2 font-black">
+            {cart.length}
+          </div>
+        </div>
         <img
           src={Notification.src}
           alt="notification"
