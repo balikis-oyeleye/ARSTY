@@ -106,3 +106,7 @@ select:focus input:focus textarea:focus {
   background-color: #3341c1 !important;
   color: #fff !important;
 }
+
+.slide button {
+  display: none !important;
+}

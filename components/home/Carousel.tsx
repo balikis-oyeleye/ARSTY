@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
+import { Carousel as Slider } from "flowbite-react";
 
 const Carousel = ({ img1, img2, img3, img4, img5 }: carouselProp) => {
   const images = [img1, img2, img3, img4, img5];
@@ -16,14 +16,10 @@ const Carousel = ({ img1, img2, img3, img4, img5 }: carouselProp) => {
 
   return (
     <>
-      <div className="h-[550px] w-[350px]">
-        <Slider {...settings}>
+      <div className="h-[550px] min-w-[350px]">
+        <Slider slideInterval={1000} className="slide">
           {images.map((image, index) => {
-            return (
-              <div key={index}>
-                <img src={image.src} alt="slider" />
-              </div>
-            );
+            return <img src={image.src} alt="slider" key={index} width={350} />;
           })}
         </Slider>
       </div>
