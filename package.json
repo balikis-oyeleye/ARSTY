@@ -9,14 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.17",
     "@reduxjs/toolkit": "^1.9.1",
     "@types/react-slick": "^0.23.10",
     "flowbite": "^1.5.5",
     "flowbite-react": "^0.3.7",
-    "gsap": "^3.11.3",
     "next": "12.3.0",
     "nextjs-breadcrumbs": "^1.1.9",
     "rc-slider": "^10.1.0",
@@ -24,7 +20,6 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
-    "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

@@ -6,8 +6,6 @@ import Mobile from "../components/layout/Mobile";
 import Footer from "../components/layout/Footer";
 import { store } from "../app/store";
 import { Provider } from "react-redux";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "rc-slider/assets/index.css";
 
 function MyApp({ Component, pageProps }: AppProps) {

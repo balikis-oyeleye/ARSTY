@@ -15,6 +15,7 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   INCREASE_ITEM,
+  DECREASE_ITEM,
 } from "../../features/cart/cartSlice";
 
 const Product = ({ product }: Product) => {
@@ -31,7 +32,7 @@ const Product = ({ product }: Product) => {
       </div>
       <main className="container mx-auto mt-[81px] px-2 sm:px-0 mb-8 font-satoshi">
         <div className="md:border border-grey flex flex-col items-center md:flex-row max-w-5xl mx-auto">
-          <div className="py-6 px-3 md:self-start">
+          <div className="py-6 px-3 md:self-start border-b border-[grey]">
             <Image src={product.image} />
           </div>
           <div className="w-full md:border-l border-grey">
@@ -51,7 +52,10 @@ const Product = ({ product }: Product) => {
               <p className="text-grey2 my-5 md:px-7">Made in Italy</p>
               <p className="text-grey2 md:px-7">Total views: 1.7K views</p>
               <div className="text-[30px] text-grey font-medium my-5 space-x-2 md:px-7">
-                <button>-</button> <span>{productInCart?.quantity || 1}</span>
+                <button onClick={() => dispatch(DECREASE_ITEM(product))}>
+                  -
+                </button>{" "}
+                <span>{productInCart?.quantity || 1}</span>
                 <button onClick={() => dispatch(INCREASE_ITEM(product))}>
                   +
                 </button>

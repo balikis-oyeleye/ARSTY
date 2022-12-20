@@ -13,6 +13,7 @@ interface carouselProp {
   img3: string | StaticImport;
   img4: string | StaticImport;
   img5: string | StaticImport;
+  interval: number;
 }
 
 interface slidesProp {
@@ -41,6 +42,10 @@ interface Product {
   product: productProps;
 }
 
+interface Products {
+  products: productProps[];
+}
+
 interface Cart {
-  cartItems: productProps[] | [];
+  cartItems: productProps[];
 }

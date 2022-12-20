@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Breadcrumb from "../../components/common/Breadcrumb";
 import { BiSearch } from "react-icons/bi";
 import Filters from "../../components/marketplace/Filters";
 import Products from "../../components/marketplace/Products";
 import Head from "../../components/common/Head";
+import { products } from "../../data/products";
 
 const Marketplace = () => {
+  const [sort, setSort] = useState("");
+
+  const sortProduct = () => {
+    let sorted = products.sort((a, b) => a.id - b.id);
+
+    if (sort === "Price - High to Low") {
+      sorted = products.sort((a, b) => b.price - a.price);
+    } else if (sort === "Price - Low to High") {
+      sorted = products.sort((a, b) => a.price - b.price);
+    } else if (sort === "Ascending") {
+      sorted = products.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sort === "Descending") {
+      sorted = products.sort((a, b) => b.name.localeCompare(a.name));
+    }
+
+    return sorted;
+  };
+
   return (
     <>
       <Head headTitle="Marketplace | ARTSY" />
@@ -35,21 +54,22 @@ const Marketplace = () => {
               name=""
               id=""
               className="border-[0.4px] rounded-lg border-none"
+              onChange={(e) => setSort(e.target.value)}
             >
               <option value="sort by" hidden>
                 Sort by
               </option>
-              <option value="">Price- High to Low</option>
-              <option value="">Price- Low to High</option>
-              <option value="">Ascending</option>
-              <option value="">Descending</option>
+              <option value="Price - High to Low">Price - High to Low</option>
+              <option value="Price - Low to High">Price - Low to High</option>
+              <option value="Ascending">Ascending</option>
+              <option value="Descending">Descending</option>
             </select>
           </div>
         </div>
       </section>
       <section className="container mx-auto px-2 xs:px-0 flex gap-x-[57px]">
         <Filters />
-        <Products />
+        <Products products={sortProduct()} />
       </section>
     </>
   );

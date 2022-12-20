@@ -1,10 +1,9 @@
-import { Card } from "@mui/material";
+import { Card } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { products } from "../../data/products";
 
-const Products = () => {
+const Products = ({ products }: Products) => {
   return (
     <main className="mx-auto my-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6 mx-auto">

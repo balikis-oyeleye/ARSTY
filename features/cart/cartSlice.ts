@@ -24,7 +24,14 @@ export const cartSlice = createSlice({
         item.quantity++;
       }
     },
-    DECREASE_ITEM: () => {},
+    DECREASE_ITEM: (state, action: PayloadAction<productProps>) => {
+      const item = state.cartItems.find(
+        (item) => item.name === action.payload.name
+      );
+      if (item && item.quantity > 1) {
+        item.quantity--;
+      }
+    },
   },
 });
 

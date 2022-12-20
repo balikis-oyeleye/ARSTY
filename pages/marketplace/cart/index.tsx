@@ -7,13 +7,25 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../app/store";
-import { REMOVE_FROM_CART } from "../../../features/cart/cartSlice";
+import {
+  REMOVE_FROM_CART,
+  INCREASE_ITEM,
+  DECREASE_ITEM,
+} from "../../../features/cart/cartSlice";
 import Image from "next/image";
 
 const Cart = () => {
   const router = useRouter();
 
   const cart = useSelector((state: RootState) => state.cart.cartItems);
+
+  const total = useSelector((state: RootState) => {
+    return state.cart.cartItems.reduce((prev, current) => {
+      prev += current.price * current.quantity;
+      return prev;
+    }, 0);
+  });
+
   const dispatch = useDispatch();
 
   return (
@@ -54,15 +66,23 @@ const Cart = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="border rounded-[10px] border-black md:text-2xl md:border-none">
-                      <button className="border-r px-3 border-black md:border-none">
+                      <button
+                        className="border-r px-3 border-black md:border-none"
+                        onClick={() => dispatch(DECREASE_ITEM(item))}
+                      >
                         -
                       </button>
                       <span className="px-3 md:text-2xl">{item.quantity}</span>
-                      <button className="border-l px-3 border-black md:text-2xl md:border-none">
+                      <button
+                        className="border-l px-3 border-black md:text-2xl md:border-none"
+                        onClick={() => dispatch(INCREASE_ITEM(item))}
+                      >
                         +
                       </button>
                     </div>
-                    <p className="md:text-2xl">${item.price}0</p>
+                    <p className="md:text-2xl">
+                      ${(item.price * item.quantity).toFixed(1)}0
+                    </p>
                   </div>
                 </div>
               </div>
@@ -97,12 +117,12 @@ const Cart = () => {
             </div>
             <div className="flex items-center justify-between mb-4">
               <span>Total :</span>
-              <span>$114.00</span>
+              <span>${total.toFixed(2)}</span>
             </div>
           </div>
           <div className="flex items-center justify-between mb-4">
             <span>Grand total:</span>
-            <span>$116.50</span>
+            <span>${(total + 2.5).toFixed(2)}</span>
           </div>
           <button
             className="w-[250px] py-2 text-white bg-[#3341C1] rounded font-medium mx-auto my-4"
