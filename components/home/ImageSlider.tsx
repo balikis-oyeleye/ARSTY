@@ -39,7 +39,7 @@ const ImageSlider = () => {
         img3={girl_glass}
         img4={hand_leaf}
         img5={girl}
-        interval={900}
+        interval={1500}
       />
       <Carousel
         img1={hand_tree}

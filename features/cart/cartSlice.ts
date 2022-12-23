@@ -32,9 +32,17 @@ export const cartSlice = createSlice({
         item.quantity--;
       }
     },
+    EMPTY_CART: (state) => {
+      state.cartItems = [];
+    },
   },
 });
 
-export const { ADD_TO_CART, REMOVE_FROM_CART, INCREASE_ITEM, DECREASE_ITEM } =
-  cartSlice.actions;
+export const {
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  INCREASE_ITEM,
+  DECREASE_ITEM,
+  EMPTY_CART,
+} = cartSlice.actions;
 export default cartSlice.reducer;

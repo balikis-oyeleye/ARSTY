@@ -38,8 +38,8 @@ select:focus input:focus textarea:focus {
 }
 
 ._2jvtI {
-  display: flex;
   gap: 5px;
+  display: flex;
 }
 
 ._2jvtI li {
@@ -47,7 +47,7 @@ select:focus input:focus textarea:focus {
   color: #bcb7b7;
   text-transform: capitalize;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 ._2jvtI li:last-of-type {
@@ -55,7 +55,7 @@ select:focus input:focus textarea:focus {
 }
 
 ._2jvtI li:not(:last-of-type)::after {
-  content: " /";
+  content: "/";
 }
 
 .box-shadow {
@@ -109,4 +109,15 @@ select:focus input:focus textarea:focus {
 
 .slide button {
   display: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
 }

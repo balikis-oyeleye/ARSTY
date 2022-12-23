@@ -28,6 +28,13 @@ const Cart = () => {
 
   const dispatch = useDispatch();
 
+  const navigate = () => {
+    if (cart.length === 0) return alert("Cart is Empty");
+    else {
+      router.push("/marketplace/cart/shipping");
+    }
+  };
+
   return (
     <>
       <Head headTitle="Cart | ARTSY" />
@@ -126,7 +133,7 @@ const Cart = () => {
           </div>
           <button
             className="w-[250px] py-2 text-white bg-[#3341C1] rounded font-medium mx-auto my-4"
-            onClick={() => router.push("/marketplace/cart/shipping")}
+            onClick={navigate}
           >
             Proceed to checkout
           </button>

@@ -50,11 +50,7 @@ const FeaturedLarge = () => {
                   64 major creators
                 </p>
                 <div className="text-grey2 border border-grey2 p-2 rounded-full hidden md:block">
-                  <Link
-                    passHref
-                    legacyBehavior
-                    href={`/marketplace/${product.title.toLocaleLowerCase()}`}
-                  >
+                  <Link passHref legacyBehavior href={`/marketplace`}>
                     <a href="">
                       <BsArrowRight size={24} />
                     </a>
