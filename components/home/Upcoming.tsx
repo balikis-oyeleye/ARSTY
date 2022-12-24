@@ -28,7 +28,7 @@ const Upcoming = () => {
               <span className="border-b cursor-pointer">See more</span>
             </Link>
             <button className="border cursor-pointer p-2 rounded-[10px]">
-              <Link href="/drop">Set a reminder</Link>
+              <Link href="/auctions/live-bid/drop">Set a reminder</Link>
             </button>
           </div>
         </div>
