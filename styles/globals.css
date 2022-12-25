@@ -128,3 +128,13 @@ input[type="number"] {
   border: 0.5px solid #ffffff;
   border-radius: 8px;
 }
+
+.blue {
+  background-color: #4693ed;
+}
+.green {
+  background-color: #3ea03b;
+}
+.gray {
+  background-color: #999ea5;
+}

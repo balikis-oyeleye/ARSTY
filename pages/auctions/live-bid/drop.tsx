@@ -23,27 +23,50 @@ const Drop = () => {
           Notify me
         </button>
       </div>
-      <main className="container mx-auto px-2 xs:px-0 font-satoshi">
-        {drops.map((drop) => (
-          <div key={drop.id}>
-            <div className="relative">
-              <Image src={drop.image} />
-              <div className="absolute top-2 text-white right-2">
+      <main className="container mx-auto px-2 xs:px-0 font-satoshi space-y-12">
+        {drops.map((drop, index) => (
+          <div
+            key={drop.id}
+            className="flex flex-col sm:flex-row gap-x-9 items-center justify-center"
+          >
+            <div className="relative max-w-[398px]">
+              <div className="sm:hidden">
+                <Image src={drop.image} alt={drop.name} className="" />
+              </div>
+              <div className="hidden sm:block">
+                <Image src={drop.image2} alt={drop.name} className="" />
+              </div>
+              <div
+                className={`absolute top-2 text-white right-2 sm:hidden font-medium ${
+                  drop.color
+                } px-[18px] py-[4px] ${
+                  index === 0 ? "rounded-[5px]" : "rounded-[12px]"
+                }`}
+              >
                 {drop.state}
               </div>
-              <div className="absolute text-white bottom-4 time left-2 right-2 pl-7">
-                <p>Time remaining</p>
+              <div className="absolute text-white bottom-4 time left-2 right-2 pl-7 max-w-[368px]">
+                <p>{drop.remain}</p>
                 <p>{drop.time}</p>
               </div>
             </div>
-            <div>
-              <p>{drop.date}</p>
-              <h4>{drop.name}</h4>
-              <p>{drop.text}</p>
-              <p>
-                Creator: <span>{drop.creator}</span>
+            <div className="mt-[20px] sm:mt-0 flex flex-col items-start">
+              <div
+                className={`text-white font-medium ${drop.color} px-[18px] py-[4px] hidden sm:block rounded-[10px]`}
+              >
+                {drop.state}
+              </div>
+              <p className="">{drop.date}</p>
+              <h4 className="text-2xl my-[15px] font-medium">{drop.name}</h4>
+              <p className="text-[15px] text-[#616161] sm:w-[433px]">
+                {drop.text}
               </p>
-              <a href="#">{drop.type}</a>
+              <p className="text-xl my-[15px] font-medium">
+                Creator: <span className="text-[#006ca2]">{drop.creator}</span>
+              </p>
+              <a href="#" className="underline text-[#006ca2]">
+                {drop.type}
+              </a>
             </div>
           </div>
         ))}

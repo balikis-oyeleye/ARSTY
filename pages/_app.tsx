@@ -7,6 +7,8 @@ import Footer from "../components/layout/Footer";
 import { store } from "../app/store";
 import { Provider } from "react-redux";
 import "rc-slider/assets/index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [toggle, setToggle] = useState(false);
