@@ -31,11 +31,11 @@ const Product = ({ product }: Product) => {
         <Breadcrumb />
       </div>
       <main className="container mx-auto mt-[81px] px-2 sm:px-0 mb-8 font-satoshi">
-        <div className="md:border border-grey flex flex-col items-center md:flex-row max-w-5xl mx-auto">
-          <div className="py-6 px-3 md:self-start border-b border-[grey]">
-            <Image src={product.image} />
+        <div className="md:border border-grey flex flex-col md:flex-row max-w-5xl mx-auto w-full">
+          <div className="py-6 px-3 md:self-start md:w-2/4 border-[grey] md:border-r">
+            <img src={product.image.src} className="w-full h-auto" />
           </div>
-          <div className="w-full md:border-l border-grey">
+          <div className="md:w-2/4 border-grey">
             <div className="border-b border-grey">
               <div className="flex justify-between md:border-b border-grey items-center mb-4 md:mb-0 font-medium md:px-7 md:py-6">
                 <h4 className="text-grey text-base md:font-bold md:text-2xl">
