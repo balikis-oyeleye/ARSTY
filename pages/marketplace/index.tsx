@@ -4,26 +4,13 @@ import { BiSearch } from "react-icons/bi";
 import Filters from "../../components/marketplace/Filters";
 import Products from "../../components/marketplace/Products";
 import Head from "../../components/common/Head";
-import { products } from "../../data/products";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../app/store";
+import { SORT_PRODUCT } from "../../features/product/productSlice";
 
 const Marketplace = () => {
-  const [sort, setSort] = useState("");
-
-  const sortProduct = () => {
-    let sorted = products.sort((a, b) => a.id - b.id);
-
-    if (sort === "Price - High to Low") {
-      sorted = products.sort((a, b) => b.price - a.price);
-    } else if (sort === "Price - Low to High") {
-      sorted = products.sort((a, b) => a.price - b.price);
-    } else if (sort === "Ascending") {
-      sorted = products.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sort === "Descending") {
-      sorted = products.sort((a, b) => b.name.localeCompare(a.name));
-    }
-
-    return sorted;
-  };
+  const products = useSelector((state: RootState) => state.product.products);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -54,7 +41,7 @@ const Marketplace = () => {
               name=""
               id=""
               className="border-[0.4px] rounded-lg border-none"
-              onChange={(e) => setSort(e.target.value)}
+              onChange={(e) => dispatch(SORT_PRODUCT(e.target.value))}
             >
               <option value="sort by" hidden>
                 Sort by
@@ -69,7 +56,7 @@ const Marketplace = () => {
       </section>
       <section className="container mx-auto px-2 xs:px-0 flex gap-x-[57px]">
         <Filters />
-        <Products products={sortProduct()} />
+        <Products products={products} />
       </section>
     </>
   );

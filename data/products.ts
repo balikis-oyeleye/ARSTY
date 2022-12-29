@@ -91,3 +91,12 @@ export const products = [
     quantity: 1,
   },
 ];
+
+export const artists = ["Ali Dawa", "Adekunle Chiroma", "Hatake Kakashi"];
+export const categories = [
+  "Editorials",
+  "Fashion",
+  "Optics",
+  "Art & Museum",
+  "Nature",
+];

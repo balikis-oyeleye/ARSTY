@@ -2,23 +2,34 @@ import Image from "next/image";
 import React, { useState } from "react";
 import filter from "../../assets/svg/Frame 34.svg";
 import Slider from "rc-slider";
+import { categories, artists } from "../../data/products";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../app/store";
+import {
+  FILTER_PRODUCTS,
+  FILTER_BY_PRICE,
+} from "../../features/product/productSlice";
 
 const Filters = () => {
   const [range, setRange] = useState<any>([1, 1]);
+  const [creators, setCreators] = useState<string[]>([]);
+  const dispatch = useDispatch();
 
   const rangeValue = (arr: any) => {
     setRange(arr);
+    dispatch(FILTER_BY_PRICE(arr));
   };
 
-  const categories = [
-    "Editorials",
-    "Fashion",
-    "Optics",
-    "Art & Museum",
-    "Nature",
-  ];
+  const handleCreatorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.checked) {
+      setCreators([...creators, e.target.value]);
+    } else if (!e.target.checked) {
+      setCreators((prev) => prev.filter((item) => item !== e.target.value));
+    }
+  };
 
-  const artists = ["Ali Dawa", "Adekunle Chiroma", "Hatake Kakashi"];
+  console.log(range);
+
   return (
     <aside className="hidden md:block mt-8">
       <div className="flex items-center gap-x-2 border-b-2 border-black pb-2">
@@ -53,7 +64,7 @@ const Filters = () => {
         max={10}
         onChange={(e) => rangeValue(e)}
       />
-      <h4 className="my-4">By category</h4>
+      <h4 className="my-4">By creator</h4>
       <div className="flex flex-col">
         {artists.map((artist) => {
           return (
@@ -61,6 +72,8 @@ const Filters = () => {
               <input
                 type="checkbox"
                 name=""
+                onChange={(e) => dispatch(FILTER_PRODUCTS(e.target.value))}
+                value={artist}
                 id={artist}
                 className="bg-[#D9D9D9] border-none rounded-[5px] text-[#D9D9D9] checked:bg-black"
               />
