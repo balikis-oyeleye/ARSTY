@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { products } from "../../data/products";
 
 const initialState: Filter = {
-  products: products,
+  products: products.slice(0, -1),
   creators: [],
   categories: [],
   filteredByCategories: products,

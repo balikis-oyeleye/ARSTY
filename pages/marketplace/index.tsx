@@ -59,7 +59,9 @@ const Marketplace = () => {
           <Products products={products} />
         ) : (
           <div className="grid place-items-center w-full">
-            <h1>No Results Found</h1>
+            <h1 className="font-bold text-3xl font-satoshi">
+              No Results Found
+            </h1>
           </div>
         )}
       </section>

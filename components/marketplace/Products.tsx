@@ -16,10 +16,10 @@ const Products = ({ products }: Products) => {
                 href={`/marketplace/${product.name.toLocaleLowerCase()}`}
               >
                 <a href="">
-                  <Image
-                    src={product.image}
+                  <img
+                    src={product.image.src}
                     alt={product.name}
-                    className="cursor-pointer"
+                    className="cursor-pointer max-h-[280px] min-h-[280px]"
                     loading="lazy"
                   />
                 </a>
@@ -29,7 +29,7 @@ const Products = ({ products }: Products) => {
                   {product.name}
                 </h5>
                 <p className=" md:font-bold text-grey font-satoshi text-base">
-                  ${product.price}0
+                  ${product.price.toFixed(2)}
                 </p>
               </div>
             </Card>

@@ -17,6 +17,8 @@ import {
   INCREASE_ITEM,
   DECREASE_ITEM,
 } from "../../features/cart/cartSlice";
+import { featured } from "../../data/products";
+import Link from "next/link";
 
 const Product = ({ product }: Product) => {
   const cart = useSelector((state: RootState) => state.cart.cartItems);
@@ -96,6 +98,31 @@ const Product = ({ product }: Product) => {
           </div>
         </div>
       </main>
+      <section className="container mx-auto px-2 xs:px-0 my-10 font-satoshi">
+        <div className="flex overflow-auto gap-x-[40px]">
+          {featured.map((prod) => (
+            <div className="border px-8 pt-8" key={prod.id}>
+              <Link
+                passHref
+                legacyBehavior
+                href={`/marketplace/${prod.name.toLocaleLowerCase()}`}
+              >
+                <img
+                  src={prod.image.src}
+                  alt={prod.name}
+                  className="sm:min-w-[446px] min-w-[369px] sm:min-h-[421px] sm:max-h-[421px] min-h-[369px] max-h-[369px]"
+                />
+              </Link>
+              <div className="flex justify-between items-center my-4">
+                <p className="font-medium text-2xl text-grey">{prod.name}</p>
+                <p className="font-medium text-2xl text-grey">
+                  ${prod.price.toFixed(2)}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </>
   );
 };

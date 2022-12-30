@@ -7,6 +7,10 @@ import img6 from "../assets/images/Rectangle 50.png";
 import img7 from "../assets/images/Rectangle 48.png";
 import img8 from "../assets/images/Rectangle 52.png";
 import img9 from "../assets/images/Rectangle 55.png";
+import img10 from "../assets/images/Rectangle 65.png";
+import img11 from "../assets/images/Rectangle 256.png";
+import img12 from "../assets/images/Rectangle 258.png";
+import img13 from "../assets/images/Rectangle 260.png";
 
 export const products = [
   {
@@ -90,6 +94,42 @@ export const products = [
     category: "Fashion",
     quantity: 1,
   },
+  {
+    id: 10,
+    name: "SASSY",
+    image: img10,
+    price: 9.1,
+    creator: "Hatake Kakashi",
+    category: "Fashion",
+    quantity: 1,
+  },
+  {
+    id: 11,
+    name: "BOUGIE",
+    image: img11,
+    price: 6.1,
+    creator: "Hatake Kakashi",
+    category: "Fashion",
+    quantity: 1,
+  },
+  {
+    id: 12,
+    name: "LOST",
+    image: img12,
+    price: 10,
+    creator: "Hatake Kakashi",
+    category: "Fashion",
+    quantity: 1,
+  },
+  {
+    id: 13,
+    name: "CIRCA ‘95",
+    image: img13,
+    price: 3.7,
+    creator: "Hatake Kakashi",
+    category: "Fashion",
+    quantity: 1,
+  },
 ];
 
 export const artists = ["Ali Dawa", "Adekunle Chiroma", "Hatake Kakashi"];
@@ -99,4 +139,43 @@ export const categories = [
   "Optics",
   "Art & Museum",
   "Nature",
+];
+
+export const featured = [
+  {
+    id: 10,
+    name: "SASSY",
+    image: img10,
+    price: 9.1,
+    creator: "Hatake Kakashi",
+    category: "Fashion",
+    quantity: 1,
+  },
+  {
+    id: 11,
+    name: "BOUGIE",
+    image: img11,
+    price: 6.1,
+    creator: "Hatake Kakashi",
+    category: "Fashion",
+    quantity: 1,
+  },
+  {
+    id: 12,
+    name: "LOST",
+    image: img12,
+    price: 10,
+    creator: "Hatake Kakashi",
+    category: "Fashion",
+    quantity: 1,
+  },
+  {
+    id: 13,
+    name: "CIRCA ‘95",
+    image: img13,
+    price: 3.7,
+    creator: "Hatake Kakashi",
+    category: "Fashion",
+    quantity: 1,
+  },
 ];
