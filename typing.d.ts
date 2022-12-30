@@ -49,3 +49,16 @@ interface Products {
 interface Cart {
   cartItems: productProps[];
 }
+
+interface Filter {
+  products: productProps[];
+  creators: string[];
+  categories: string[];
+  filteredByCategories: productProps[];
+  price: number[];
+}
+
+interface filterProps {
+  setToggleFilter: React.Dispatch<React.SetStateAction<boolean>>;
+  // toggleFilter: boolean;
+}

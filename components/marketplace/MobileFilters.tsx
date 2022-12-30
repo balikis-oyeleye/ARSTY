@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import filter from "../../assets/svg/Frame 34.svg";
 import Slider from "rc-slider";
 import { categories, artists } from "../../data/products";
@@ -13,7 +13,7 @@ import {
   UN_FILTER_BY_CREATORS,
 } from "../../features/product/productSlice";
 
-const Filters = () => {
+const Filters = ({ setToggleFilter }: filterProps) => {
   const dispatch = useDispatch();
   const priceFilter = useSelector((state: RootState) => state.product.price);
 
@@ -33,10 +33,10 @@ const Filters = () => {
   };
 
   return (
-    <aside className="hidden sm:block mt-8">
-      <div className="flex items-center gap-x-2 border-b-2 border-black pb-2">
+    <div className="flex items-center justify-center flex-col gap-x-2">
+      <div className="flex items-start gap-x-2">
         <Image src={filter} width={32} height={32} />
-        <p className="font-satoshi text-2xl">Filter</p>
+        <p className="font-satoshi text-2xl">Filters</p>
       </div>
       <h4 className="my-4">By category</h4>
       <div className="flex flex-col">
@@ -88,7 +88,13 @@ const Filters = () => {
           );
         })}
       </div>
-    </aside>
+      <button
+        className="bg-[#3247e2] mt-5 px-4 py-2 rounded text-white"
+        onClick={() => setToggleFilter(false)}
+      >
+        Show results
+      </button>
+    </div>
   );
 };
 

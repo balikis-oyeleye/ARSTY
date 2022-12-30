@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import Breadcrumb from "../../components/common/Breadcrumb";
-import { BiSearch } from "react-icons/bi";
+import { BiSearch, BiX } from "react-icons/bi";
 import Filters from "../../components/marketplace/Filters";
 import Products from "../../components/marketplace/Products";
 import Head from "../../components/common/Head";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../app/store";
 import { SORT_PRODUCT } from "../../features/product/productSlice";
+import MobileFilter from "../../components/marketplace/MobileFilters";
 
 const Marketplace = () => {
+  const [toggleFilter, setToggleFilter] = useState(false);
   const products = useSelector((state: RootState) => state.product.products);
   const dispatch = useDispatch();
 
@@ -28,19 +30,16 @@ const Marketplace = () => {
             See 1-6 of 15 results
           </p>
           <div className="flex items-center justify-between box-shadow2 p-2 md:p-0 rounded-xl md:rounded-none">
-            <select
-              name=""
-              id=""
-              className="border-[0.4px] rounded-lg block md:hidden border-none"
+            <button
+              className="border-[0.4px] rounded-lg block sm:hidden border-none"
+              onClick={() => setToggleFilter(true)}
             >
-              <option value="" hidden>
-                Filters
-              </option>
-            </select>
+              Filters
+            </button>
             <select
               name=""
               id=""
-              className="border-[0.4px] rounded-lg border-none"
+              className="border-[0.4px] rounded-lg border-none ml-auto"
               onChange={(e) => dispatch(SORT_PRODUCT(e.target.value))}
             >
               <option value="sort by" hidden>
@@ -56,8 +55,26 @@ const Marketplace = () => {
       </section>
       <section className="container mx-auto px-2 xs:px-0 flex gap-x-[57px]">
         <Filters />
-        <Products products={products} />
+        {products.length ? (
+          <Products products={products} />
+        ) : (
+          <div className="grid place-items-center w-full">
+            <h1>No Results Found</h1>
+          </div>
+        )}
       </section>
+      <div
+        className={`fixed bg-white ${
+          toggleFilter ? "bottom-0 h-full" : "-bottom-full"
+        } w-full sm:hidden grid place-items-center transition-all duration-500`}
+      >
+        <BiX
+          size={28}
+          className="absolute top-2 right-2 cursor-pointer"
+          onClick={() => setToggleFilter(false)}
+        />
+        <MobileFilter setToggleFilter={setToggleFilter} />
+      </div>
     </>
   );
 };
