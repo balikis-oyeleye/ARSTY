@@ -24,11 +24,7 @@ const FeaturedLarge = () => {
                     {product.title}
                   </h3>
                   <div className="text-white absolute bottom-0 border border-white p-2 rounded-full">
-                    <Link
-                      passHref
-                      legacyBehavior
-                      href={`/marketplace/${product.title.toLocaleLowerCase()}`}
-                    >
+                    <Link passHref legacyBehavior href={`/marketplace`}>
                       <a href="">
                         <BsArrowRight size={24} />
                       </a>
