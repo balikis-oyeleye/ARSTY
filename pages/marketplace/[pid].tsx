@@ -132,6 +132,12 @@ export default Product;
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pid = context.params?.pid;
   const product = getProductByName(pid);
+  if (!product) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       product,
