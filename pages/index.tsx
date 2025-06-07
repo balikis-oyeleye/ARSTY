@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           </p>
         </div>
       </section>
-      <section className="slider w-full overflow-x-hidden">
+      <section className="slider w-full overflow-x-hidden max-w-[1440px] mx-auto">
         <ImageSlider />
         <ImageStack />
       </section>
